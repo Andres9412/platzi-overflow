@@ -7,7 +7,8 @@ import * as urljoin from 'url-join';
 // import urljoin = require('url-join');
 import 'rxjs/add/operator/toPromise';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/Rx';
+import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/catch'
 
 
 @Injectable()

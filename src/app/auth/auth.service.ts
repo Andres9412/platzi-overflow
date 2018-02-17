@@ -6,7 +6,9 @@ import { environment } from '../../environments/environment';
 import * as urljoin from 'url-join';
 import { Observable } from 'rxjs/Observable';
 import {MatSnackBar} from '@angular/material';
-import 'rxjs/RX'
+import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/catch'
+
 
 @Injectable()
 export class AuthService {
