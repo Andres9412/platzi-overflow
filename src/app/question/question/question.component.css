@@ -1,0 +1,20 @@
+.app-questions{
+  max-width: 900px;
+  height: 90vh;
+  margin: auto;
+  position: relative;
+}
+/* .add-button{
+  position: absolute;
+  width: 95%;
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 10;
+}
+.add-question{
+  position: fixed;
+  font-size: 24px;
+  bottom: 10px;
+}
+ */

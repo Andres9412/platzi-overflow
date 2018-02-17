@@ -1,0 +1,24 @@
+<div class="app-question-list">
+  <mat-spinner *ngIf="loading"></mat-spinner>
+  <div *ngIf="!loading" class="question-list">
+    <mat-list>
+      <h2>Preguntas hechas por nuestra comunidad
+        <br>
+         <small>
+         quieres hacer una prgunta <a [routerLink]="['Questions/new']" class="add-question" mat-raised-button color="accent">+</a>
+       </small></h2>
+      <div class="questions">
+        <mat-list-item  *ngFor="let question of questions" [routerLink]="['Questions', question._id]">
+           <i *ngIf="question.icon === 'none'" md-list-icon class="material-icons help" >help</i>
+           <i *ngIf="question.icon !== 'none'" md-list-icon class="{{question.icon}} colored" ></i>
+           <div class="question-list-questions">
+             <h3 mat-line>{{question.title}}</h3>
+             <p mat-line>
+               <small> {{question.answers.length}} respuestas - {{question.createdAt | amLocale: 'es' | amTimeAgo}}</small>
+             </p>
+           </div>
+        </mat-list-item>
+      </div>
+    </mat-list>
+  </div>
+</div>

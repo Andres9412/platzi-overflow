@@ -1,0 +1,13 @@
+  <div class="app-questions">
+    <mat-tab-group class="tap-questions">
+      <mat-tab label="Mas recientes">
+        <app-question-list sort='-createdAt'></app-question-list>
+      </mat-tab>
+      <mat-tab  label="Mas comentadas">
+        <app-question-list sort='-answers'></app-question-list>
+      </mat-tab>
+    </mat-tab-group>
+    <!-- <div class="add-button">
+      <a [routerLink]="['Questions/new']" class="add-question" mat-mini-fab color="accent">+</a>
+    </div> -->
+  </div>

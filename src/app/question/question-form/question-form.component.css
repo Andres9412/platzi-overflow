@@ -1,0 +1,17 @@
+h2 {
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 20px;
+  padding-left: 16px;
+}
+.question-form{
+  max-width: 900px;
+  margin: auto;
+
+}
+i {
+     font-size: 38px;
+}
+small{
+  display: block;
+}

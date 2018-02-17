@@ -1,0 +1,32 @@
+<div class="mat-container">
+  <mat-card>
+    <h2>Registrate</h2>
+    <form novalidate [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <input matInput placeholder="Nombre" formControlName="firstName" >
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Apellido" formControlName="lastName" >
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Correo electronico" formControlName="email" >
+      </mat-form-field>
+      <div class="passwords " [ngClass]="{'dont-check':passwordNotCheck}">
+
+       <p *ngIf="passwordNotCheck">Las contraseñas no coinciden</p>
+
+        <mat-form-field>
+          <input matInput placeholder="Contraseña" formControlName="password"  [type]="hide ? 'password' : 'text'">
+          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off' }}</mat-icon>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Confirma contraseña" formControlName="passwordCheck"  [type]="hideCheck ? 'password' : 'text'">
+          <mat-icon matSuffix (click)="hideCheck = !hideCheck">{{hideCheck ? 'visibility' : 'visibility_off' }}</mat-icon>
+        </mat-form-field>
+
+      </div>
+      <button type="submit" mat-raised-button color="accent">Registrarse</button>
+      <p style="text-align:center">¿Ya tienes cuenta? <a [routerLink]="['/Signin']" mat-button color="primary">Inicia secion</a></p>
+    </form>
+  </mat-card>
+</div>

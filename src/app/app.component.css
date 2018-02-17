@@ -1,0 +1,27 @@
+.navbar{
+  width: 100vw;
+  background-color: #3f51b5;
+
+}
+ .nav{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.spacer{
+  flex: 1 1 auto;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.account{
+  background-color: #3f51b5;
+  border: none;
+
+}
+:focus {
+    outline: 0;
+}

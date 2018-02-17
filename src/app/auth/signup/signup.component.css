@@ -1,0 +1,29 @@
+h2 {
+  margin-bottom: 0;
+}
+form {
+  margin-top: 10px;
+}
+.passwords mat-form-field{
+  width: 100%;
+}
+.dont-check{
+  border: 1px dashed hsl(353,71%,75%);
+  border-radius: 10px 10px 10px 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.passwords p{
+  border: 1px solid hsl(353,71%,85%);
+  color: hsl(356,64%,28%);
+  background-color: hsl(354,70%,89%);
+  text-align: center;
+  border-radius: 44px 44px 44px 44px;
+  width: 80%;
+  margin: 10px auto;
+}
+.mat-container{
+  max-width: 400px;
+  margin: auto;
+  margin-top: 50px;
+}

@@ -1,0 +1,38 @@
+<div class="question-details">
+  <mat-spinner *ngIf="loading"></mat-spinner>
+  <div *ngIf="!loading" class="question-list">
+    <mat-card class="card">
+      <mat-card-header>
+        <div mat-card-avatar >
+          <i *ngIf="question.icon === 'none'" md-list-icon class="material-icons icon help" >help</i>
+          <i *ngIf="question.icon !== 'none'" md-list-icon class="{{question.icon}} icon colored" ></i>
+        </div>
+        <mat-card-title id="title">
+          <h2>{{ question.title }}</h2>
+        </mat-card-title>
+        <mat-card-subtitle>
+          <small>andresf - {{question.createdAt | amLocale: 'es' | amTimeAgo}}</small>
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{question.description}}</p>
+      </mat-card-content>
+    </mat-card>
+    <div class="answers">
+      <h3>Respuestas</h3>
+      <ul class="answers-list" *ngIf="question.answers?.length > 0">
+        <li *ngFor="let answer of question.answers">
+          <h5>
+            {{ answer.user.firstName }} {{ answer.user.firstName }}
+            <small>{{answer.createdAt | amLocale: 'es' | amTimeAgo}}</small>
+          </h5>
+          <p class="description">
+            {{answer.description}}
+          </p>
+        </li>
+      </ul>
+      <p *ngIf="question.answers?.length == 0"> Se el primero en responder</p>
+    </div>
+    <app-asnwer-form [question]="question" class="answer-form"></app-asnwer-form>
+  </div>
+</div>

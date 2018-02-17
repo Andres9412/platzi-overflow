@@ -1,0 +1,8 @@
+form{
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 40px auto;
+  margin-top: 20px;
+  align-items: stretch;
+}
