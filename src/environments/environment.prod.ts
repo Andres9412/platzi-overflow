@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://hidden-reaches-90169.herokuapp.com/api/'
+  apiUrl: 'https://secret-badlands-10777.herokuapp.com/api/'
 };

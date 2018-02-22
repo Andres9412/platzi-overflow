@@ -61,7 +61,7 @@ app.post('/',required, async (req, res) => {
     const questionSaved = await question.create(q)
     res.status(201).json(questionSaved)
   } catch (e) {
-    handleError( e, res)
+    handleError(e, res)
   }
 
 
